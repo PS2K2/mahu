@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.containers {
+    width: 50%;
+    margin: 80px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+  
+    
+}
+
+.product-detail {
+    width: 100%;
+    padding: 20px;
+    background-color: #fffffffe;
+}
+
+.header {
+    background: #ffcccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.status {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.delivery-info {
+    width: 50%;
+    /* Cambia la alineación del texto a la izquierda */
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
+     /* Alinea el elemento a la derecha */
+}
+
+.delivery-info p {
+    margin: 10px 0;
+}
+
+.timeline {
+    border-left: 2px solid #ddd;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.timeline div {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline div:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #ff6666;
+    border-radius: 50%;
+}
+
+.order-summary {
+    width: 40%; /* Ajusta el ancho del resumen del pedido */
+    text-align: right;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.order-summary table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-summary table, .order-summary th, .order-summary td {
+    border: 1px solid #ddd;
+}
+
+.order-summary th, .order-summary td {
+    padding: 10px;
+    text-align: right;
+}
+
+.total {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e60000;
+}
+
+.track-button {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.track-button a {
+    background: #ff6666;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.bi-check-circle {
+    color: green;
+}

@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+header {
+    background-color: #e3dcd2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 100px; /* Ajusta el ancho de la imagen del logo */
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 100%;
+}
+.search-bar button {
+    padding: 8px 12px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.user-options {
+    display: flex;
+    align-items: center;
+}
+.user-options div {
+    margin-left: 20px;
+    cursor: pointer;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 8px;
+}
+.image-gallery {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+.image-gallery img {
+    width: 70%;
+    margin-bottom: 10px;
+}
+.main-image {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+.main-image img {
+    width: 80%;
+}
+.imagen-center {
+    display: block;
+    margin: 0 auto;
+}
+.product-details {
+    width: 100%;
+    padding: 20px;
+    background-color: #fffffffe;
+}
+.product-details h1 {
+    margin: 0 0 20px;
+    font-size: 24px;
+}
+.product-details .price {
+    margin: 20px 0;
+}
+.product-details .price span {
+    display: block;
+    margin-bottom: 10px;
+}
+.product-details .sizes {
+    margin: 20px 0;
+}
+.product-details .sizes span {
+    display: inline-block;
+    margin-right: 20px;
+}
+.product-details .quantity {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.product-details .quantity input {
+    width: 50px;
+    text-align: center;
+}
+.product-details .quantity button {
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+.product-details .buy-button {
+    padding: 10px 20px;
+    background-color: #6b1b1b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Para hacer borroso el fondo cuando el modal está abierto */
+.blur {
+    filter: blur(5px);
+}
+/* Estilos para el formulario de login */
+.container-login {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.btn {
+    background-color: #6b1b1b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #4a1313;
+}
+.social-btn {
+    margin-top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-block;
+}
+.social-btn img {
+    width: 40px;
+    height: 37px;
+}
+.social-btnf {
+    margin-top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-block;
+}
+.social-btnf img {
+    width: 60px;
+    height: 37px;
+}
+
+/* Media Queries para hacer el diseño responsivo */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .user-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .user-options div {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .image-gallery,
+    .main-image,
+    .product-details {
+        width: 100%;
+        text-align: center;
+    }
+    .product-details .sizes span {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .search-bar {
+        width: 70%;
+    }
+    .user-options {
+        flex-direction: row;
+        align-items: center;
+    }
+    .user-options div {
+        margin-left: 10px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .image-gallery,
+    .main-image,
+    .product-details {
+        width: 100%;
+        text-align: center;
+    }
+    .product-details .sizes span {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/* Pantallas grandes (escritorios) */
+@media (min-width: 769px) {
+    .container {
+        flex-direction: row;
+    }
+    .image-gallery,
+    .main-image,
+    .product-details {
+        width: 30%;
+    }
+}

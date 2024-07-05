@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Agregar Tarjeta</title>
+            <style>/* Modal Styles */
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 1;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    background-color: rgba(0, 0, 0, 0.4);
+                }
+        
+                .modal-content {
+                    background-color: #fff;
+                    margin: 15% auto;
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%;
+                    max-width: 400px;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                }
+        
+                .close {
+                    color: #aaa;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+        
+                .close:hover,
+                .close:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+        
+                .modal input {
+                    width: 100%;
+                    padding: 10px;
+                    margin: 10px 0;
+                    box-sizing: border-box;
+                }
+        
+                .modal button {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    cursor: pointer;
+                    width: 100%;
+                }
+        
+                .modal button:hover {
+                    background-color: #45a049;
+                }
+            </style>
+    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Tarjeta</title>
+    <link rel="stylesheet" href="styleMetodoPago.css">
+    <link rel="stylesheet" href="Styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   
+</head>
+<body>
+    <header id="mainHeader">
+        <a href="mahu principal.html">
+        <img src="logoMahu.png" alt="Logo Mahu" class="logo">
+        </a>
+        <div class="user-options">
+            <i class="bi bi-list"></i>
+            <div>Categorias</div>
+        </div>
+        <div class="search-bar">
+            <input type="text" style="border-radius: 12px;" placeholder="Buscar en Mahú">
+            <button><i class="bi bi-search"></i> </button>
+        </div>
+        <div class="user-options">
+            <div>Mis Pedidos</div>
+            <div onclick="openModal()">Iniciar Sesión</div>
+            <div><i class="bi bi-cart3"></i></div>        </div>
+    </header>
+
+
+    <div style="width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); ">
+        <div class="section">
+            <h2>Agregar tarjeta</h2>
+            <div class="card" onclick="showModal()" >
+                <img src="https://images.vexels.com/content/129923/preview/creditcards-icon-fc3edd.png" alt="Tarjeta de crédito">
+                <span>Tarjeta de crédito</span>
+            </div>
+            <div class="card" onclick="showModal()">
+                <img src="https://w7.pngwing.com/pngs/766/531/png-transparent-computer-icons-credit-card-credit-card-icon-brand-symbol-credit-card-icon.png" alt="Tarjeta de débito">
+                <span>Tarjeta de débito</span>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <h2>Otras opciones</h2>
+            <div class="card">
+                <img src="https://pbs.twimg.com/profile_images/1332361193995063296/pafTotyP_400x400.png" alt="PagoEfectivo">
+                <span>PagoEfectivo</span>
+                <p>Agencias y Billeteras digitales</p>
+            </div>
+            <div class="card">
+                <img src="https://w7.pngwing.com/pngs/246/916/png-transparent-computer-icons-logo-paypal-encapsulated-postscript-paypal-blue-angle-logo.png" alt="Paypal">
+                <span>PayPal</span>
+            </div>
+            <div class="card">
+                <img src="https://w7.pngwing.com/pngs/780/46/png-transparent-computer-icons-coupon-voucher-coupon-miscellaneous-text-rectangle-thumbnail.png" alt="Agregar un cupón de descuento">
+                <span>Agregar un cupón de descuento</span>
+            </div>
+        </div>
+        <a href="carritoCompra.html">
+            <button type="button" class="btn btn-outline-success">Continuar</button>
+
+        </a>
+
+
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Datos de la tarjeta</h2>
+            <form>
+                <label for="cardNumber">Número de tarjeta</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+
+                <label for="expMonth">Mes de vencimiento</label>
+                <input type="text" id="expMonth" name="expMonth" required>
+
+                <label for="expYear">Año de vencimiento</label>
+                <input type="text" id="expYear" name="expYear" required>
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required>
+                <button >Guardar datos</button>
+                
+            </form>
+        </div>
+    </div>
+
+    <script>    
+        function showModal() {
+            document.getElementById('myModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+        // Close the modal when clicking outside of the modal content
+        window.onclick = function(event) {
+            var modal = document.getElementById('myModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+    </script>
+    <script src = "funcionalidad.js"> </script>
+
+</body>
+</html>
